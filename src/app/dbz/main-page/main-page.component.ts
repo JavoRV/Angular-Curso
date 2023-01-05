@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
+import { DbzService } from '../services/dbz.service';
 
 @Component({
   selector: 'app-main-page',
@@ -8,25 +9,13 @@ import { Personaje } from '../interfaces/dbz.interface';
 
 export class MainPageComponent {
 
-  personajes: Personaje[] = [{
-    nombre: 'Yamcha',
-    poder: 500
-  },
+  nuevo: Personaje = 
   {
-    nombre:'Bulma',
-    poder: 1000
+    nombre: 'Mr. Roshi',
+    poder: 2000
   }
-];
 
-nuevo: Personaje = {
-  nombre: 'Mr. Roshi',
-  poder: 2000
-}
-
-agregarNuevoPersonaje( character: Personaje ){
-  // debugger;
-  
-  this.personajes.push( character);
-  
-}
+  constructor(){ //Inyección de dependencias
+   
+  }
 }
