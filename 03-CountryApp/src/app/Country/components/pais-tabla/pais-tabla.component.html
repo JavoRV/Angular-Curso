@@ -9,7 +9,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let pais of paises | paginate : { itemsPerPage: 10, currentPage: p }; let i = index ">
+        <tr *ngFor="let pais of paises | paginate : { itemsPerPage: 10, currentPage: page }; let i = index ">
             <td> {{ i + 1}} </td>
             <td>
                 <img class="small-flag" [src]="pais.flag">
@@ -17,9 +17,12 @@
             <td> {{pais.capital}},{{ pais.name }} </td>
             <td> {{ pais.population | number }} </td>
             <td> 
-               <a [routerLink]="['/pais', pais.cioc]">Ver...</a> 
+               <a [routerLink]="['/pais', pais.alpha3Code]">Ver...</a> 
             </td>
     </tbody>    
 </table>
 
-<pagination-controls (pageChange)="p = $event"></pagination-controls>
+<div style="text-align: center" autoHide="true">
+    <pagination-controls (pageChange)="page = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+</div>
+
