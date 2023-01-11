@@ -6,10 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CountryModule } from './Country/country.module';
 import { SharedModule } from './shared/shared.module';
+import { PaisTablaComponent } from './Country/components/pais-tabla/pais-tabla.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

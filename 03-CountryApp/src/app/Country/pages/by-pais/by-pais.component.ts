@@ -14,9 +14,10 @@ export class ByPaisComponent {
 
   constructor(private countryService: CountryService) { }
 
-  buscar() {
+  buscar(termino: string) {
 
     this.TipoError = false;
+    this.termino = termino;
     console.log(this.termino)
 
     this.countryService.buscarPais(this.termino)
@@ -28,5 +29,10 @@ export class ByPaisComponent {
         this.TipoError = true;
         this.paises = [];
       });
+  }
+
+  sugerencias( termino:string ){
+    this.TipoError = false;
+
   }
 }
