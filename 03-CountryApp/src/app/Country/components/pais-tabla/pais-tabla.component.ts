@@ -1,16 +1,18 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CountryModel } from '../../interfaces/pais.interface';
 
 @Component({
   selector: 'app-pais-tabla',
   templateUrl: './pais-tabla.component.html',
 })
-export class PaisTablaComponent {
-
-  @Input() paises: CountryModel[] = [];
+export class PaisTablaComponent implements OnInit{
 
   public page! : number;
 
-  constructor(){}
+  @Input() paises: CountryModel[] =[];
 
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 }

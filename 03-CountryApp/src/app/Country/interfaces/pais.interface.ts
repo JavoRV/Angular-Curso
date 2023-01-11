@@ -1,8 +1,7 @@
-
 export interface CountryModel {
     name:         Name;
-    alpha3Code: string;
     tld:          string[];
+    alpha2Code:   string;
     cca2:         string;
     ccn3:         string;
     cca3:         string;
@@ -17,7 +16,7 @@ export interface CountryModel {
     region:       string;
     subregion:    string;
     languages:    Languages;
-    translations: { [key: string]: Translation };
+    translations: Translations;
     latlng:       number[];
     landlocked:   boolean;
     borders:      string[];
@@ -96,12 +95,22 @@ export interface Name {
 }
 
 export interface NativeName {
-    spa: Translation;
+    spa: Translations;
 }
 
-export interface Translation {
+export interface Translations {
     official: string;
     common:   string;
+    de: string;
+    es: string;
+    fr: string;
+    ja: string;
+    it: string;
+    br: string;
+    pt: string;
+    nl: string;
+    hr: string;
+    fa: string;
 }
 
 export interface PostalCode {

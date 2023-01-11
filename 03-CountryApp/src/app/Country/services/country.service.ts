@@ -13,19 +13,16 @@ export class CountryService {
   constructor( private http: HttpClient ) { }
 
   buscarPais( termino: string ) : Observable<CountryModel[]> {
-
     const url = `${ this.ApiUrl }/name/${ termino }`;
     return this.http.get<CountryModel[]>(url);
   }
 
   buscarCapital( termino: string ) : Observable<CountryModel[]> {
-
     const url = `${this.ApiUrl}/capital/${termino}`;
     return this.http.get<CountryModel[]>(url);
   }
 
   getPaisById( Id: string ) : Observable<CountryModel> {
-
     const url = `${this.ApiUrl}/alpha/${Id}`;
     return this.http.get<CountryModel>(url);
   }
