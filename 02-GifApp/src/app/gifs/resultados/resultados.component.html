@@ -1,5 +1,6 @@
+
 <div class="row">
-    <div *ngFor="let gif of resultados" class="col-md-4 col-sm-6 animate__animated animate__fadeIn">
+    <div *ngFor="let gif of resultados | paginate: { itemsPerPage: 10, currentPage: page }" class="col-md-4 col-sm-6 animate__animated animate__fadeIn">
         <div class="card">
             
             <img [src]="gif.images.downsized_medium.url" [alt]="gif.title" class="card-img-top">
@@ -11,4 +12,12 @@
 
         </div>
     </div>
+    
+</div>
+
+<hr>
+<br>
+
+<div style="text-align: center" autoHide="true">
+    <pagination-controls (pageChange)="page = $event" previousLabel="Anterior" nextLabel="Siguiente" fxLayoutAlign="center center" > </pagination-controls>
 </div>
