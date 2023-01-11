@@ -9,7 +9,7 @@ import { VerPaisComponent } from './pages/ver-pais/ver-pais.component';
 import { RouterModule } from '@angular/router';
 import { PaisTablaComponent } from './components/pais-tabla/pais-tabla.component';
 import { PaisInputComponent } from './components/pais-input/pais-input.component';
-
+import {NgxPaginationModule} from 'ngx-pagination'
 
 
 
@@ -26,6 +26,7 @@ import { PaisInputComponent } from './components/pais-input/pais-input.component
     CommonModule,
     FormsModule,
     RouterModule,
+    NgxPaginationModule
     
   ],
   exports:[

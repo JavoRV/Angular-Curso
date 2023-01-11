@@ -9,6 +9,8 @@ export class PaisTablaComponent {
 
   @Input() paises: CountryModel[] = [];
 
+  public p! : number;
+
   constructor(){}
 
 }

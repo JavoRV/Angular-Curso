@@ -9,7 +9,7 @@ import { CountryModel } from '../interfaces/pais.interface';
 export class CountryService {
 
   private ApiUrl : string = 'https://restcountries.com/v2'
-
+  
   constructor( private http: HttpClient ) { }
 
   buscarPais( termino: string ) : Observable<CountryModel[]> {
@@ -18,4 +18,9 @@ export class CountryService {
     return this.http.get<CountryModel[]>(url);
   }
 
+  buscarCapital( termino: string ) : Observable<CountryModel[]> {
+
+    const url = `${this.ApiUrl}/capital/${termino}`;
+    return this.http.get<CountryModel[]>(url);
+  }
 }

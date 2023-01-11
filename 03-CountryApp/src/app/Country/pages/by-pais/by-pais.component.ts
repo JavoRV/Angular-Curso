@@ -33,6 +33,5 @@ export class ByPaisComponent {
 
   sugerencias( termino:string ){
     this.TipoError = false;
-
   }
 }
