@@ -34,6 +34,7 @@ import {NgxPaginationModule} from 'ngx-pagination'
     ByPaisComponent,
     ByRegionComponent,
     VerPaisComponent,
+    PaisTablaComponent
   ]
 })
 export class CountryModule { }

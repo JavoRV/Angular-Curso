@@ -14,5 +14,6 @@ export class PaisTablaComponent implements OnInit{
   constructor() { }
 
   ngOnInit(): void {
+    this.page = 1;
   }
 }
